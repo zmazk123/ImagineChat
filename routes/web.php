@@ -9,7 +9,7 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
-Route::get('/sse', [ChatController::class, 'stream'])->middleware(['auth', 'verified']);
+Route::get('/sse', [ChatController::class, 'stream']);
 
 Route::get('/auth/github/redirect', ProviderRedirectController::class)->name('auth.redirect');
 Route::get('/auth/github/callback', ProviderCallbackController::class)->name('auth.callback');

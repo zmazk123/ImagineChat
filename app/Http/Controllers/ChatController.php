@@ -16,7 +16,10 @@ class ChatController extends Controller
     
     public function stream()
     {
-
+        if (! auth()->check()) {
+            abort(401);
+        }
+        
         $pdo = DB::connection()->getPdo();
         $pdo->exec('LISTEN new_message');
         $ticks = 0;
