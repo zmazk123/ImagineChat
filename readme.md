@@ -44,6 +44,6 @@ Security considerations are built into the application by leveraging Laravel’s
 
 - Add tests for TDD
 - In case it would be a high traffic app we could add rate limiting on sending messages to avoid abuse
-
+- Improve user management, like checking for unique usernames...
 - Improve frontend user experience
 - Use Livewire events for receiving messages for more clean code. Or use a JS framework(Vue, React) 
